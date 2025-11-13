@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ArqEye - The AI Enterprise Architect your company can actually afford. Replace $250K/year EAs with AI expertise that learns, reasons, and guides.">
+    <title>ArqEye - AI Enterprise Architect as a Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1e40af;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero .tagline {
+            font-size: 24px;
+            color: #475569;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .hero .cta-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #1e40af;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1e3a8a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(30, 64, 175, 0.2);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1e40af;
+            border: 2px solid #1e40af;
+        }
+
+        .btn-secondary:hover {
+            background: #f1f5f9;
+        }
+
+        /* Content Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        section h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+
+        .section-intro {
+            font-size: 20px;
+            color: #64748b;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        /* Problem Section */
+        .problem {
+            background: #fef2f2;
+        }
+
+        .problem-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 20px;
+            color: #991b1b;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        /* Solution Section */
+        .solution {
+            background: #ecfdf5;
+        }
+
+        .solution-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 18px;
+            color: #065f46;
+            line-height: 1.8;
+        }
+
+        .solution-content p {
+            margin-bottom: 20px;
+        }
+
+        .example-box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #10b981;
+            margin-top: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .example-box h4 {
+            color: #059669;
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .example-box p {
+            color: #374151;
+            font-size: 16px;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: #f8fafc;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .feature p {
+            color: #64748b;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .benefit {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .benefit:hover {
+            border-color: #1e40af;
+            box-shadow: 0 10px 20px rgba(30, 64, 175, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .benefit h3 {
+            color: #1e40af;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .benefit p {
+            color: #64748b;
+            font-size: 16px;
+        }
+
+        /* Founder Section */
+        .founder {
+            background: #1e293b;
+            color: white;
+        }
+
+        .founder h2 {
+            color: white;
+        }
+
+        .founder-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .signup-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .signup-form input {
+            flex: 1;
+            min-width: 250px;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .signup-form button {
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            background: white;
+            color: #1e40af;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .signup-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #93c5fd;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero .tagline {
+                font-size: 18px;
+            }
+
+            section h2 {
+                font-size: 28px;
+            }
+
+            .features-grid,
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .signup-form {
+                flex-direction: column;
+            }
+
+            .signup-form input {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">ArqEye</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>The AI Enterprise Architect<br>Your Company Can Actually Afford</h1>
+            <p class="tagline">Replace $250K/year senior EAs with AI expertise that learns your company,<br>reasons through decisions, and provides 24/7 architectural guidance.</p>
+            <div class="cta-group">
+                <a href="#signup" class="btn btn-primary">Join Early Access</a>
+                <a href="#solution" class="btn btn-secondary">Learn How It Works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2>The Problem</h2>
+            <div class="problem-content">
+                <p>Only large enterprises can afford $250K+ senior Enterprise Architects. Most mid-market companies have zero EA guidance and make expensive architectural mistakes that cost millions in technical debt, failed migrations, and wrong technology choices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution" id="solution">
+        <div class="container">
+            <h2>The ArqEye Solution</h2>
+            <div class="solution-content">
+                <p><strong>ArqEye is an AI Enterprise Architect that companies hire instead of human EAs.</strong></p>
+                
+                <p>It automatically learns your company by listening to meetings, capturing every architectural decision, the reasoning behind it, who was involved, and why alternatives were rejected. Within a month, ArqEye understands your architecture, your team's capabilities, your risk tolerance, and your decision-making patterns better than any consultant could.</p>
+
+                <div class="example-box">
+                    <h4>Example: Real EA Reasoning</h4>
+                    <p>When you ask <em>"Should we migrate to microservices?"</em> ArqEye doesn't just search and return generic pros/cons. It reasons through the problem like a senior EA: analyzes your past decisions (you prefer proven over trendy), considers your constraints (15-person team), remembers your struggles (Redis took 2 weeks to learn), applies your philosophy ("evolve don't revolutionize"), explores multiple solution paths, and recommends what's best for your specific company with detailed reasoning and 80% confidence backed by self-consistency verification.</p>
+                </div>
+
+                <p>ArqEye is available 24/7, never leaves, costs 70% less than hiring a senior EA ($60K-240K/year vs $250K+), and gets smarter every meeting. It provides proactive weekly architecture reviews, identifies technical debt, flags risks, and recommends solutions before you ask.</p>
+
+                <p><strong>Companies get enterprise architecture expertise they couldn't otherwise afford.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🎧</div>
+                    <h3>Listens & Learns</h3>
+                    <p>Automatically captures architectural decisions from your meetings. No manual documentation needed.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Understands Context</h3>
+                    <p>Builds deep knowledge of your constraints, capabilities, team philosophy, and past decisions.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💡</div>
+                    <h3>Reasons Like a Senior EA</h3>
+                    <p>Analyzes problems, considers alternatives, applies your company's patterns, and recommends solutions with confidence scores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section>
+        <div class="container">
+            <h2>Why ArqEye</h2>
+            <p class="section-intro">Not a documentation tool. Not a search wrapper. An AI professional that does the job of a senior enterprise architect.</p>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <h3>70% Cost Savings</h3>
+                    <p>$60K-240K/year vs $250K+ for senior EAs. Enterprise expertise without the enterprise price tag.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Always Available</h3>
+                    <p>24/7 architectural guidance. No scheduling, no waiting, no consulting retainers.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Gets Smarter</h3>
+                    <p>Learns from every meeting, every decision, every project. Your EA becomes more valuable over time.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Privacy-First</h3>
+                    <p>Self-hosted architecture with zero-knowledge principles. Your data never leaves your control.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder -->
+    <section class="founder">
+        <div class="container">
+            <h2>Built by an Enterprise Architect</h2>
+            <div class="founder-content">
+                <p>ArqEye was created by <strong>Ravi Joseph</strong>, an Enterprise Architect with 45 years of experience across TOGAF, SAP S/4HANA migrations, public sector, and manufacturing. After decades of seeing companies struggle without proper EA guidance, Ravi built the AI professional that makes enterprise architecture expertise accessible to every company.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="signup">
+        <div class="container">
+            <h2>Get Early Access to ArqEye</h2>
+            <p>Join companies getting world-class enterprise architecture expertise<br>they couldn't otherwise afford.</p>
+            <form class="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="email" name="email" placeholder="your@email.com" required>
+                <button type="submit">Join Waitlist</button>
+            </form>
+            <p style="margin-top: 20px; font-size: 16px; opacity: 0.8;">Launching Q1 2026</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ArqEye. All rights reserved.</p>
+            <p style="margin-top: 10px;">Contact: <a href="mailto:hello@arqeye.com">hello@arqeye.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
