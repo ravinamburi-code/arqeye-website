@@ -15,8 +15,15 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #ffffff;
+            color: #1f2933;
+            /* SubTracker-style soft pastel gradient */
+            background: linear-gradient(
+                135deg,
+                #e3f2fd 0%,
+                #d1f1e0 35%,
+                #fceecf 70%,
+                #fde2d3 100%
+            );
         }
 
         .container {
@@ -28,7 +35,8 @@
         /* Header */
         header {
             padding: 20px 0;
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+            backdrop-filter: blur(18px);
         }
 
         .logo {
@@ -42,13 +50,22 @@
         .hero {
             padding: 80px 0;
             text-align: center;
-            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+        }
+
+        /* Frosted-glass hero card, like the SubTracker UI */
+        .hero .container {
+            background: rgba(255, 255, 255, 0.68);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+            padding: 60px 40px;
         }
 
         .hero h1 {
             font-size: 48px;
             font-weight: 800;
-            color: #1e293b;
+            color: #0f172a;
             margin-bottom: 20px;
             line-height: 1.2;
         }
@@ -71,7 +88,7 @@
             padding: 16px 32px;
             font-size: 18px;
             font-weight: 600;
-            border-radius: 8px;
+            border-radius: 999px;
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s ease;
@@ -80,24 +97,27 @@
         }
 
         .btn-primary {
-            background: #1e40af;
+            background: #2563eb;
             color: white;
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
         }
 
         .btn-primary:hover {
-            background: #1e3a8a;
+            background: #1d4ed8;
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(30, 64, 175, 0.2);
+            box-shadow: 0 16px 40px rgba(37, 99, 235, 0.45);
         }
 
         .btn-secondary {
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             color: #1e40af;
-            border: 2px solid #1e40af;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            box-shadow: 0 8px 20px rgba(148, 163, 184, 0.25);
         }
 
         .btn-secondary:hover {
-            background: #f1f5f9;
+            background: rgba(248, 250, 252, 0.95);
+            transform: translateY(-1px);
         }
 
         /* Content Sections */
@@ -108,7 +128,7 @@
         section h2 {
             font-size: 36px;
             font-weight: 700;
-            color: #1e293b;
+            color: #0f172a;
             margin-bottom: 16px;
             text-align: center;
         }
@@ -116,7 +136,7 @@
         section h3 {
             font-size: 24px;
             font-weight: 600;
-            color: #1e293b;
+            color: #0f172a;
             margin-bottom: 12px;
         }
 
@@ -128,23 +148,25 @@
             margin: 0 auto 60px;
         }
 
-        /* Problem Section */
+        /* Problem Section - soft glassy panel */
         .problem {
-            background: #fef2f2;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
         }
 
         .problem-content {
             max-width: 900px;
             margin: 0 auto;
             font-size: 20px;
-            color: #991b1b;
+            color: #b91c1c;
             text-align: center;
             line-height: 1.8;
         }
 
-        /* Solution Section */
+        /* Solution Section - soft panel with subtle green accent */
         .solution {
-            background: #ecfdf5;
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(16px);
         }
 
         .solution-content {
@@ -160,12 +182,12 @@
         }
 
         .example-box {
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 30px;
-            border-radius: 12px;
+            border-radius: 16px;
             border-left: 4px solid #10b981;
             margin-top: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
         }
 
         .example-box h4 {
@@ -182,7 +204,8 @@
 
         /* How It Works */
         .how-it-works {
-            background: #f8fafc;
+            background: rgba(255, 255, 255, 0.74);
+            backdrop-filter: blur(14px);
         }
 
         .features-grid {
@@ -204,7 +227,7 @@
         .feature h3 {
             font-size: 22px;
             margin-bottom: 12px;
-            color: #1e293b;
+            color: #0f172a;
         }
 
         .feature p {
@@ -222,16 +245,17 @@
         }
 
         .benefit {
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            border: 1px solid rgba(226, 232, 240, 0.9);
             transition: all 0.3s ease;
+            box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
         }
 
         .benefit:hover {
             border-color: #1e40af;
-            box-shadow: 0 10px 20px rgba(30, 64, 175, 0.1);
+            box-shadow: 0 16px 40px rgba(30, 64, 175, 0.22);
             transform: translateY(-4px);
         }
 
@@ -248,8 +272,9 @@
 
         /* Founder Section */
         .founder {
-            background: #1e293b;
+            background: rgba(15, 23, 42, 0.9);
             color: white;
+            backdrop-filter: blur(18px);
         }
 
         .founder h2 {
@@ -264,15 +289,20 @@
             line-height: 1.8;
         }
 
-        /* CTA Section */
+        /* CTA Section - light pastel band */
         .cta-section {
-            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
-            color: white;
+            background: linear-gradient(
+                135deg,
+                rgba(227, 242, 253, 0.95) 0%,
+                rgba(252, 238, 207, 0.98) 100%
+            );
+            color: #1e293b;
             text-align: center;
+            backdrop-filter: blur(16px);
         }
 
         .cta-section h2 {
-            color: white;
+            color: #0f172a;
             margin-bottom: 20px;
         }
 
@@ -296,34 +326,37 @@
             min-width: 250px;
             padding: 16px;
             font-size: 16px;
-            border: none;
-            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.8);
+            border-radius: 999px;
             outline: none;
+            background: rgba(255, 255, 255, 0.95);
         }
 
         .signup-form button {
             padding: 16px 40px;
             font-size: 16px;
             font-weight: 600;
-            background: white;
-            color: #1e40af;
+            background: #2563eb;
+            color: #ffffff;
             border: none;
-            border-radius: 8px;
+            border-radius: 999px;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 0 10px 28px rgba(37, 99, 235, 0.4);
         }
 
         .signup-form button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 14px 36px rgba(37, 99, 235, 0.5);
         }
 
         /* Footer */
         footer {
-            background: #0f172a;
+            background: rgba(15, 23, 42, 0.96);
             color: #94a3b8;
             padding: 40px 0;
             text-align: center;
+            backdrop-filter: blur(18px);
         }
 
         footer a {
@@ -360,6 +393,10 @@
 
             .signup-form input {
                 min-width: 100%;
+            }
+
+            .hero .container {
+                padding: 40px 24px;
             }
         }
     </style>
@@ -480,7 +517,7 @@
         <div class="container">
             <h2>Get Early Access to ArqEye</h2>
             <p>Join companies getting world-class enterprise architecture expertise<br>they couldn't otherwise afford.</p>
-            <form class="signup-form" action="https://formspree.io/f/xovyvoyd" method="POST">
+            <form class="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                 <input type="email" name="email" placeholder="your@email.com" required>
                 <button type="submit">Join Waitlist</button>
             </form>
